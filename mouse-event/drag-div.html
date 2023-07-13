@@ -13,7 +13,8 @@
         .drag-able {
             width: 100px;
             height: 100px;
-            background-color: red;
+            background-color: darkblue;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -37,22 +38,30 @@
 
         window.addEventListener('mousemove', (e) => {
             if(isClicked) {
-                moveX = e.clientX - clickX;
-                moveY = e.clientY - clickY;
-                div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`
+                const top = e.clientY > 0;
+                const left = e.clientX > 0;
+                const right = e.clientX < window.innerWidth;
+                const bottom = e.clientY < window.innerHeight;
+
+                if(top && left && right && bottom) {
+                    moveX = e.clientX - clickX;
+                    moveY = e.clientY - clickY;
+                    div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`
+                } else {
+                    isClicked = false;        
+                    div.style.transform = `translate(${endX}px, ${endY}px)`
+                }    
             }
         })
 
         div.addEventListener('mouseup', () => { 
-            isClicked = false;
-            endX = moveX + endX;
-            endY = moveY + endY;
-            console.log(endX, endY);
+            if(isClicked) {
+                isClicked = false;
+                endX = moveX + endX;
+                endY = moveY + endY;
+                console.log(endX, endY);
+            }
         })
-        
-        // window.addEventListener('mouseout', () => {
-        //     div.style.transform = `translate(${endX}px, ${endY}px)`
-        // })
     </script>
 </body>
 </html>
