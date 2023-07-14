@@ -7,7 +7,7 @@
     <style>
         body {
             height: 5000px;
-            background-image: linear-gradient(#555, #aaa);
+            background: rgb(156, 183, 152);
         }
 
         .content {
@@ -30,7 +30,8 @@
         }
 
         .this-is-what {
-            margin-bottom: 1000px;
+            margin-bottom: 500px;
+            display: block;
         }
     </style>
 </head>
@@ -38,16 +39,27 @@
     <div class="content scroll-content">
         나타난다~! 뿅~!
     </div>
-    <img src="img_activity02.jpg" class="this-is-what" alt="">
+    <img src="img_activity02.jpg" class="this-is-what scroll-opacity" alt="">
+    <img src="img_activity02.jpg" class="this-is-what scroll-opacity" alt="">
+    <img src="img_activity02.jpg" class="this-is-what scroll-opacity" alt="">
+    <img src="img_activity02.jpg" class="this-is-what scroll-opacity" alt="">
     <script>
         const scrollContent = document.querySelector('.scroll-content');
-        const thisIsWhat = document.querySelector('.this-is-what');
+        const scrollOpacity = document.getElementsByClassName('scroll-opacity');
+        const BackgroundColor = document.querySelector('body');
 
         window.addEventListener('scroll', (e) => {
 
-            const 좌표 = thisIsWhat.getBoundingClientRect().top - window.innerHeight;
-            const 백분율 = -(좌표 + 300) / 600;
+            
 
+            for(let i = 0; i < scrollOpacity.length; i++) {
+                const 좌표 = scrollOpacity[i].getBoundingClientRect().top - window.innerHeight;
+
+                const 백분율 = -(좌표 + window.innerHeight / 3) / (window.innerHeight / 3);
+                scrollOpacity[i].style.opacity = `${백분율}`;
+
+            }
+            
             if(scrollContent.getBoundingClientRect().top - window.innerHeight < 0) {
                 scrollContent.classList.add('active');
             } else {
