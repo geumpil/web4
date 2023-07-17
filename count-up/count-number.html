@@ -10,12 +10,23 @@
     <script>
         const goal = 123456;
         const countPlace = document.querySelector('.count-place');
-        
-        for( let i = 0; i <= goal; i++) {
-            setTimeout(() => {
-                countPlace.innerText = i;
-            }, i / goal * 5000);
+        const countDuration = 5000;
+        const framePerSec = 1
+        const playCount = countDuration * framePerSec / 1000
+
+        function easeOutCubic(x) {
+            return 1 - Math.pow(1 - x, 3);  
         }
+
+        for(let i = 0; i < playCount; i++) {
+            const display = i / (playCount - 1);
+
+            setTimeout(() => {
+                countPlace.innerText = parseInt(easeOutCubic(display) * goal); 
+            }, (countDuration / playCount) * (i + 1));
+
+        }
+        
     </script>
 </body>
 </html>
