@@ -7,25 +7,35 @@
 </head>
 <body>
     <p class="count-place">0</p>
+    <p class="count-place2">0</p>
     <script>
-        const goal = 123456;
+        
         const countPlace = document.querySelector('.count-place');
-        const countDuration = 5000;
-        const framePerSec = 1
-        const playCount = countDuration * framePerSec / 1000
+        const countPlaceTwo = document.querySelector('.count-place2');
 
-        function easeOutCubic(x) {
-            return 1 - Math.pow(1 - x, 3);  
+        // makeCountUp(countPlace, 168000, 5000, 60, 5);
+        makeCountUp(countPlaceTwo, 125000, 4000, 60, 4);
+
+        
+
+        function makeCountUp(target, goal, countDuration, framePerSec, inclination) {
+        
+            function easeOutCubic(x) {
+            return 1 - Math.pow(1 - x, inclination);  
+            }
+
+            const playCount = countDuration * framePerSec / 1000
+    
+            for(let i = 0; i < playCount; i++) {
+                const display = i / (playCount - 1);
+    
+                setTimeout(() => {
+                    countPlace.innerText = parseInt(easeOutCubic(display) * goal); 
+                }, (countDuration / playCount) * (i + 1));
+    
+            }
         }
 
-        for(let i = 0; i < playCount; i++) {
-            const display = i / (playCount - 1);
-
-            setTimeout(() => {
-                countPlace.innerText = parseInt(easeOutCubic(display) * goal); 
-            }, (countDuration / playCount) * (i + 1));
-
-        }
         
     </script>
 </body>

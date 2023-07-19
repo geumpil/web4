@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #test {
+            height: 5000px;
+            background: linear-gradient(#aaa, #ccc);
+            position: relative;
+        }
+
+        #movie {
+            width: 80%;
+            height: 25vh;
+            /* background-color: antiquewhite; */
+            position: absolute;
+            animation: full-screen 2s ease-in-out both alternate infinite;
+            top: 60vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #movie.pause {
+            animation-play-state: paused;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        @keyframes full-screen {
+            from {
+                width: 80%;
+                height: 25vh;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 60vh;
+            } 
+            
+            50% {
+                width: 100%;
+                height: 25vh;
+                top: 60vh;
+                left: 0;
+                transform: none;
+            } 
+            
+            to {
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <div id="movie"class="pause">
+            <video src="movie-action.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+    <script>
+        const movies = document.getElementById('movie');
+
+        let playState = false;
+        window.addEventListener('mousewheel', (e) => {
+            if(e.wheelDelta > 0 ) {
+                if(window.scrollY === 0 && playState) {
+                    e.preventDefault();
+                    movie.classList.remove('pause');
+                    setTimeout(() => {
+                       movie.classList.add('pause');
+                       playState = !playState; 
+                    }, 2000);
+                }
+            } else {
+                if(window.scrollY === 0 && !playState) {
+                    e.preventDefault();
+                    movie.classList.remove('pause');
+                    setTimeout(() => {
+                       movie.classList.add('pause');
+                       playState = !playState; 
+                    }, 2000);
+                }        
+            }
+        }, {passive: false})
+    </script>
+</body>
+</html>
