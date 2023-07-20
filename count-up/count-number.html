@@ -30,7 +30,7 @@
                 const display = i / (playCount - 1);
     
                 setTimeout(() => {
-                    countPlace.innerText = parseInt(easeOutCubic(display) * goal); 
+                    target.innerText = parseInt(easeOutCubic(display) * goal); 
                 }, (countDuration / playCount) * (i + 1));
     
             }
