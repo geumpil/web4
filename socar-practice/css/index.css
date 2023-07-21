@@ -138,6 +138,10 @@ h1 > a {
     line-height: 130%;
 }
 
+main {
+    overflow: hidden;
+}
+
 #advantages-container {
     padding : 80px 32px;
     display: flex;
@@ -208,10 +212,12 @@ h1 > a {
 
 .incline {
     position: absolute;
+    left: 0%;
     width: 100%;
     height: 100%;
     background-color: var(--main-color);
     transform: translateX(80%) skewX(-30deg);
+    transition: 1s;
 }
 
 footer {
@@ -289,6 +295,7 @@ footer nav {
     overflow: hidden;
     width: 60px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.417);
+    animation: dissolve 1.5s 1.2s both;
 }
 
 #app-download > p {
@@ -296,6 +303,7 @@ footer nav {
     z-index: 1;
     color: white;
     font-size: 20px;
+    animation: dissolve 1s both;
 }
 
 #app-download > p::after {
@@ -309,6 +317,27 @@ footer nav {
 
 #app-download > .incline {
     transform: skewX(-30deg) translateX(24px);
+    animation: appMove 1s 0.8s both;
+}
+
+@keyframes dissolve {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }   
+}
+
+@keyframes appMove {
+    from {
+        left : 100%;
+    }
+
+    to {
+        left : 0%;
+    }
 }
 
 @media screen and (max-width : 800px) {
