@@ -73,6 +73,7 @@ header.hide {
 h1 {
     width: 112px;
     position: relative;
+    z-index: 10;
 }
 
 h1 > a {
@@ -102,16 +103,38 @@ h1 > a {
     flex-direction: column;
     justify-content: center;
     gap: 6px;
+    z-index: 10;
+    position: relative;
 }
 
 .hamberger::before,.hamberger::after {
+    position: absolute;
     display: block;
     content: '';
     width: 80%;
     height: 3px;
     background-color: #fff;
+    transition: 0.4s;
     /* background-color: var(--main-color); */
 }
+
+.hamberger.active::before {
+    transform: rotate(45deg)
+}
+
+.hamberger.active::after {
+    transform: rotate(-45deg)
+}
+
+.hamberger::after {
+    transform: translate(-4px, -5px);   
+}
+
+.hamberger::before {
+    transform: translate(4px, 5px);
+}
+
+
 
 .hamberger::after {
     margin-left: auto;
@@ -338,6 +361,56 @@ footer nav {
     to {
         left : 0%;
     }
+}
+
+.hamberger-click {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000dd;
+    display: none;
+}
+
+.hamberger-click.active {
+    display: block;
+}
+
+.hamberger-nav {
+    width: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #28323c;
+    height: 100vh;
+    padding: 0 32px;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.hamberger-nav > div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 1px solid #555;
+}
+
+.hamberger-nav > div:last-child {
+    border-bottom: none;
+}
+
+.hamberger-nav > div > a {
+    color: white;
+    padding: 14px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.hamberger-nav > div > a:hover {
+    color: var(--main-color);
 }
 
 @media screen and (max-width : 800px) {
