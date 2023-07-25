@@ -35,12 +35,42 @@ window.addEventListener('scroll', () => {
 const hambergerButton = document.querySelector('.hamberger')
 const hambergerClick = document.querySelector('.hamberger-click')
 const hambergerNav = document.querySelector('.hamberger-nav')
+const navTransition = 500;
 
-hambergerButton.addEventListener('click', () => {
+hambergerNav.style.transition = `${navTransition}ms`;
+
+function openHamberger() {
     hambergerButton.classList.add('active')
     hambergerClick.classList.add('active')
+    headerAct.classList.add('active')
 
     setTimeout(() => {
        hambergerNav.style.transform = 'none'; 
     }, 0);
+}
+
+function closeHamberger(transition) {
+    hambergerButton.classList.remove('active')
+    hambergerNav.style.transform = 'translateX(100%)'; 
+
+    setTimeout(() => {
+        hambergerClick.classList.remove('active')
+        headerAct.classList.remove('active')
+    }, transition);
+}
+
+hambergerButton.addEventListener('click', (e)=> {
+    e.preventDefault();
+    if(hambergerButton.classList.contains('active')) {
+        closeHamberger(navTransition);
+    } else {
+        openHamberger();
+    }
 })
+
+window.addEventListener('scroll', ()=> {
+    if(hambergerButton.classList.contains('active')) {
+        closeHamberger(0);
+    }
+})
+
