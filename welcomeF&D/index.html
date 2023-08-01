@@ -10,23 +10,50 @@
 <body>
     <header>
         <div class="header-wrap">
-            <div clsss="header-logo">
-                <a href="#" alt="logo">
+            <div class="header-logo">
+                <a href="#">
                     <span class="hidden">웰컴에프앤디</span>
                     <img src="image/header_logo_tp.svg" alt="header-logo">
                 </a>
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">사업소개</a></li>
-                    <li><a href="#">홍보센터</a></li>
-                    <li><a href="#">인재채용</a></li>
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="hidden">
+                            <li><a href="#">웰컴에프앤디 소개</a></li>
+                            <li><a href="#">연혁</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">사업소개</a>
+                        <ul class="hidden">
+                            <li><a href="#">ICT서비스</a></li>
+                            <li><a href="#">경영관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">홍보센터</a>
+                        <ul class="hidden">
+                            <li><a href="#">사내이야기</a></li>
+                            <li><a href="#">뉴스</a></li>
+                            <li><a href="#">실무자코멘트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인재채용</a>
+                        <ul class="hidden">
+                            <li><a href="#">입사지원</a></li>
+                            <li><a href="#">웰컴복지</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <a href="#" class="navi-bar">
-                <span class="hidden">메뉴바</span>
-            </a>
+            <div class="navi-bar">
+                <a href="#" >
+                    <span class="">전체메뉴</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -106,8 +133,8 @@
 
     <section id="business-animation">
         <div class="our-business">
-            <p class="left-text">Our</p>
-            <p class="right-text">Business</p>
+            <h2 class="left-text">Our</h2>
+            <h2 class="right-text">Business</h2>
         </div>
     </section>
 
@@ -128,7 +155,7 @@
                             <h3>ICT서비스</h3>
                             <p>4차 산업혁명을 선도하는 차별화된 IT기술과 축적된 전문 역량을 기반으로 디지털 혁신을 실현하고 선진화된 시스템을 구축합니다.</p>
                         </div>
-                        <a href="#" class="ani-effect" alt="check-work">업무 확인하기</a>
+                        <span class="ani-effect">업무 확인하기</span>
                     </a>
                 </li>
                 <li>
@@ -140,7 +167,7 @@
                             <h3>디지털 전략</h3>
                             <p>디지털 비즈니스의 전반적인 목표와 방향, 전략을 수립하고 새로운 비즈니스의 창출과 성장을 극대화할 수 있도록 솔루션을 제공하고 개선해 나아갑니다.</p>
                         </div>
-                        <a href="#" class="ani-effect" alt="check-work">업무 확인하기</a>
+                        <span class="ani-effect">업무 확인하기</span>
                     </a>
                 </li>
                 <li>
@@ -152,7 +179,7 @@
                             <h3>경영관리</h3>
                             <p>안정적이고 체계적인 경영관리와 사업 영위 중 발생하는 이슈를 해결하고, 업무 시너지 증대를 위해 효과적이고 쾌적한 업무환경을 지원합니다.</p>
                         </div>
-                        <a href="#" class="ani-effect" alt="check-work">업무 확인하기</a>
+                        <span class="ani-effect">업무 확인하기</span>
                     </a>
                 </li>
             </ul>
@@ -161,7 +188,7 @@
 
     <section id="story-animation">
         <div class="our-story">
-            <p class="right-text">Our story</p>
+            <h2 class="right-text">Our story</h2>
         </div>
     </section>
 
@@ -192,16 +219,16 @@
                 <div class="slider-image-box">
                     <ul class="slider-image-area">
                         <li class="slider-image-list">
-                            <img src="" alt="image-slide-01">
+                            <img src="image/img_story_220221.jpg" alt="image-slide-01">
                         </li>
                         <li class="slider-image-list">
-                            <img src="" alt="image-slide-02">
+                            <img src="image/img_story_220331.jpg" alt="image-slide-02">
                         </li>
                         <li class="slider-image-list">
-                            <img src="" alt="image-slide-03">
+                            <img src="image/img_story_220526.jpg" alt="image-slide-03">
                         </li>
                         <li class="slider-image-list">
-                            <img src="" alt="image-slide-04">
+                            <img src="image/img_story_230102.png" alt="image-slide-04">
                         </li>
                     </ul>
                 </div>
@@ -227,27 +254,27 @@
     <section id="news">
         <div class="news-wrapper">
             <h3><a href="#">뉴스</a></h3>
-            <ul clas="news-list">
+            <ul class="news-list">
                 <li class="news-list-content">
-                    <a href="#" alt="">
+                    <a href="#">
                         <p class="news-title">20주년 맞은 웰컴금융, '용산 시대' 연다</p>
                         <p class="news-date">2022-10-20</p>
                     </a>
                 </li>
                 <li class="news-list-content">
-                    <a href="#" alt="">
+                    <a href="#">
                         <p class="news-title">원조 의료가전 ‘미건라이프’ 홈페이지 오픈</p>
                         <p class="news-date">2022-06-13</p>
                     </a>
                 </li>
                 <li class="news-list-content">
-                    <a href="#" alt="">
+                    <a href="#">
                         <p class="news-title">웰컴금융그룹, 3년 새 계열사 10개 신규 편입</p>
                         <p class="news-date">2022-01-28</p>
                     </a>
                 </li>
                 <li class="news-list-content">
-                    <a href="#" alt="">
+                    <a href="#">
                         <p class="news-title">용산시대 개막…신규 서비스 확대·글로벌 사업 확장</p>
                         <p class="news-date">2022-01-17</p>
                     </a>
@@ -261,7 +288,7 @@
 
     <section id="recruit">
         <div class="recruit-box">
-            <p class="recruit-title">웰컴에프앤디와 함께 새로운 내일을 만들어갈 분들을 찾습니다.</p>
+            <h2 class="recruit-title">웰컴에프앤디와 함께 새로운 내일을 만들어갈 분들을 찾습니다.</h2>
             <p class="recruit-text">오늘보다 더 나은 내일을 당신과 함께 만들고 싶습니다.</p>
         </div>
         <div class="direct-enter">
@@ -272,7 +299,7 @@
     <footer id="footer">
         <div class="footer-wrap">
             <div class="footer-logo">
-                <img src="" alte="웰컴에프앤디">
+                <img src="image/footer_logo.svg" alt="웰컴에프앤디">
             </div>
             <ul class="footer-list-area">
                 <li class="footer-list">개인정보처리방침</li>
@@ -282,7 +309,7 @@
                 © Welcome F&D Corp. All rights reserved.
             </p>
             <div class="family-site-box">
-                <a href="#" alt="family-site">FAMILY SITE</a>
+                <a href="#">FAMILY SITE</a>
                 <ul class="box-area">
                     <li class="box-list"><a href="#" target="_blank">웰컴금융그룹</a></li>
                     <li class="box-list"><a href="#" target="_blank">웰컴저축은행</a></li>

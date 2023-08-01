@@ -1,5 +1,6 @@
 header {
-    background-color: black;
+    background: transparent;
+    display: fixed;
 }
 
 .hidden {
@@ -38,6 +39,47 @@ nav.menu > ul > li:last-child > a::after {
     width: 9px;
     height: 9px;
     position: absolute;
-    top: 50%;
-    right:
+    top: 45%;
+    right: 14%;
 }
+
+nav.menu > ul > li:hover > a {
+    color: #EA002C;
+}
+
+nav.menu > ul > li:hover > a::after {
+    background-image: url(../image/icon_arrow_tpSel.png);
+}
+
+.navi-bar {
+    padding: 20px 20px;
+    height: 50px;
+}
+
+.navi-bar > a {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navi-bar > a > span {
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    font-size: 0;
+}
+
+.navi-bar > a > span::before, .navi-bar > a > span::after {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: white;
+}
+
+#main-banner > .main-movie {
+    width: 100%;
+}
+
+
