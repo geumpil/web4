@@ -4,7 +4,6 @@ header {
     width: 100%;
     z-index: 100;
     border-bottom: 1px solid rgba(179, 179, 179, 0.3);
-
 }
 
 .hidden {
@@ -30,7 +29,7 @@ nav.menu > ul {
 nav.menu > ul > li > a {
     color: white;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -1px;
     padding: 38px 30px;
     position: relative;
@@ -155,19 +154,21 @@ div.right > .plus {
 
 .text-animation {
     position: absolute;
+    top: -2px;
     left: calc(100% + 8px);
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 900;
     color: #EA002C;
     letter-spacing: 0;
 }
 
 .main-text {
     font-size: 56px;
-    font-weight: bold;
+    font-weight: 900;
     color: white;
     line-height: 80px;
-    letter-spacing: 0;
+    letter-spacing: -2px;
 }
 
 
@@ -176,6 +177,7 @@ div.right > .plus {
     color: white;
     padding-top: 40px;
     padding-left: 6px;
+    letter-spacing: 0;
 }
 
 #welcome-record {
@@ -185,8 +187,9 @@ div.right > .plus {
 
 #welcome-record > h2 {
     text-align: center;
-    font-size: 38px;
+    font-size: 36px;
     padding-bottom: 84px;
+    letter-spacing: -2px;
 }
 
 .power-describe {
@@ -199,7 +202,36 @@ div.right > .plus {
     text-align: center;
 }
 
+.record-image > img {
+    padding: 20px 0 20px;
+}
 
+.record-image > figcaption {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #222222;
+}
 
+.record-text {
+    padding: 60px 0 14px;
+}
 
+.count-up {
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
 
+.record-text > span:last-child {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.record-addexplain {
+    font-size: 16px;
+    font-weight: 400;
+    color: #767676;
+    padding: 4px 0 8px;
+}
