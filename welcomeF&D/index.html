@@ -13,36 +13,37 @@
             <div class="header-logo">
                 <a href="#">
                     <span class="hidden">웰컴에프앤디</span>
-                    <img src="image/header_logo_tp.svg" alt="header-logo">
+                    <img class="none-expand-logo" src="image/header_logo_tp.svg" alt="header-logo">
+                    <img class="expand-logo" src="image/header_logo.svg" alt="expand-header-logo">
                 </a>
             </div>
             <nav class="menu">
-                <ul>
-                    <li>
+                <ul class="main-menu">
+                    <li class="main-menu-list">
                         <a href="#">회사소개</a>
-                        <ul class="hidden">
+                        <ul class="sub-menu">
                             <li><a href="#">웰컴에프앤디 소개</a></li>
                             <li><a href="#">연혁</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="main-menu-list">
                         <a href="#">사업소개</a>
-                        <ul class="hidden">
+                        <ul class="sub-menu">
                             <li><a href="#">ICT서비스</a></li>
                             <li><a href="#">경영관리</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="main-menu-list">
                         <a href="#">홍보센터</a>
-                        <ul class="hidden">
-                            <li><a href="#">사내이야기</a></li>
+                        <ul class="sub-menu">
+                            <li><a href="#">사내 이야기</a></li>
                             <li><a href="#">뉴스</a></li>
-                            <li><a href="#">실무자코멘트</a></li>
+                            <li><a href="#">실무자 코멘트</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="main-menu-list">
                         <a href="#">인재채용</a>
-                        <ul class="hidden">
+                        <ul class="sub-menu">
                             <li><a href="#">입사지원</a></li>
                             <li><a href="#">웰컴복지</a></li>
                         </ul>
@@ -325,6 +326,7 @@
         </div>
     </footer>
 
+    <script src="js/headerExpand.js"></script>
     <script src="js/bannerAnimation.js"></script>
     <script src="js/index.js"></script>
 </body>
