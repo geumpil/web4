@@ -1,0 +1,17 @@
+.home-theater-system {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.viewarea {
+	width: 12%;
+	transition: 2s;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.view-expand {	
+	width: 100%;	/* 정해진 스크롤 위치에 도달하였을 경우 */
+}
