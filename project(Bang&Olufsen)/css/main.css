@@ -1,21 +1,38 @@
 /* header */
 
 header {
-    /* background-color: black; */
     position: fixed;
     width: 100%;
+    height: 100px;
     z-index: 10;
+    transition: 0.4s;
+}
+
+header.act {
+    background-color: black;
+    height: 80px;
+
 }
 
 .header-wrap {
-    height: 100px;
+    height: 100%;
     padding: 0 194px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.logo > svg {
+    transition: 0.4s;
+}
+
+header.act .logo > svg {
+    width: 40px;
+    height: 40px;
+}
+
 .main-list {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,16 +40,23 @@ header {
     top: 0;
     left: 50%;
     translate: calc(-50%);
+    letter-spacing: 1px;
+}
+.main-list-cate {
+    height: 100%;
 }
 
 .main-list-cate > a {
     width: 100%;
+    padding: 0 40px;
     /* line-height: 100px; */
-    padding: 43px 40px;
-    display: block;
+    height: 100%;
+    display: flex;
     text-align: center;
-    font-size: 14px;  
+    font-size: 16px;  
     box-sizing: border-box;
+    align-items: center;
+    
 }
 
 .main-list-cate > a > span {
@@ -71,8 +95,7 @@ header {
 /* main view */
 
 .video-area {
-    margin: 0 auto;
-    background: radial-gradient(black 80%);
+    position: relative;
 }
 
 .video-area > video {
@@ -82,6 +105,100 @@ header {
     object-position: center top;
 }
 
-.video-title-area > h1 {
-    
+.video-title-area {
+    padding: 0 194px;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    color: white;
 }
+
+.video-title-area > h1 {
+    font-size: 20px;
+}
+
+.video-title-area .video-main-title {
+    padding-top: 10px;
+    font-size: 60px;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+
+.line-break {
+    display: none;
+}
+
+/* section - bao-items */
+
+#bao-items {
+    padding-top: 300px;
+}
+
+.content-wrap {
+    padding: 0 194px;
+}
+
+.bao-title {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bao-title > h2 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.bao-title > p {
+    padding-top: 50px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.items-type {
+    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.items-list {
+    width: 25%;
+    text-align: center;
+}
+
+.items-list figcaption {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+/* section - beosound-explore */
+
+#beosound-explore {
+    padding-top: 300px;
+}
+
+.beosound-video-area > video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.beosound-text-area > h2 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.beosound-text-area > a {
+    display: block;
+    background-color: #FFC356;
+    width: 160px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 200px;
+}
+
+
