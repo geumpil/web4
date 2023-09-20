@@ -70,11 +70,18 @@ header {
 
 /* main view */
 
-
+.video-area {
+    margin: 0 auto;
+    background: radial-gradient(black 80%);
+}
 
 .video-area > video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
     object-position: center top;
+}
+
+.video-title-area > h1 {
+    
 }
