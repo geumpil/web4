@@ -274,14 +274,184 @@ header.act .logo > svg {
     width: 50%;
 }
 
-
-
-
-
 .high-battery-view video {
     width: 100%;
     object-fit: cover;
 }
+
+.sub-explain {
+    padding-top: 40px;
+    color: white;
+}
+
+.sub-explain h4 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.sub-explain p {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.always-connecting {
+    padding-top: 200px;
+    width: 50%;
+}
+
+.always-connecting-view video {
+    width: 100%;
+    object-fit: cover;
+}
+
+.durability {
+    width: 100%;
+    padding-top: 200px;
+}
+
+.durability-view {
+    height: 960px;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.durability-view video {
+    width: 100%;
+    object-fit: cover;
+    object-position: center -150px;
+}
+
+.durability-explain {
+    max-width: 760px;
+    width: 100%;
+    border-top: 1px solid white;
+    color: white
+}
+
+.durability-explain > h3 {
+    padding-top: 30px;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.durability-explain > p {
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+.etc-detail {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+}
+
+.etc-detail-list  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+ul.etc-detail > li:nth-child(2) {
+    align-items: start;
+}
+
+.etc-detail-list figure figcaption {
+    padding-top: 40px;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+
+/* section - home-theater-system */
+
+#home-theater-system {
+    padding-top: 300px;
+}
+
+.home-textarea {
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+}
+
+.home-textarea h2 {
+    font-size: 60px;   
+    font-weight: 300; 
+}
+
+.home-textarea p {
+    padding-top: 50px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.home-theater-detail {
+    padding-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.detail-image-area {
+    max-width: 610px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.detail-text-area {
+    color: white;
+}
+
+.detail-text-area span {
+    display: block;
+    font-size: 20px;
+    color: #969696;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
+.detail-text-area h2 {
+    padding-top: 30px;
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.detail-text-area p {
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+.slider-area {
+    padding-top: 300px;
+    max-width: 1920px;
+    width: 100%;
+}
+
+.slide-wrapper {
+    display: flex;
+    justify-content: center;
+    width: calc(1120px * 6);
+    overflow: hidden;
+}
+
+.slide-image-view {
+    margin: 0 60px;
+    width: 1120px;
+    flex-shrink: 0;
+    
+}
+
+.slide-image-view img {
+    width: 100%;
+}
+
 
 
 
