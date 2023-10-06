@@ -279,6 +279,14 @@ header.act .logo > svg {
     object-fit: cover;
 }
 
+<<<<<<< Updated upstream
+=======
+.always-connecting {
+    padding-top: 200px;
+    width: 50%;
+}
+
+>>>>>>> Stashed changes
 .sub-explain {
     padding-top: 40px;
     color: white;
@@ -293,12 +301,15 @@ header.act .logo > svg {
 .sub-explain p {
     font-size: 20px;
     font-weight: 100;
+<<<<<<< Updated upstream
     line-height: 1.6;
 }
 
 .always-connecting {
     padding-top: 200px;
     width: 50%;
+=======
+>>>>>>> Stashed changes
 }
 
 .always-connecting-view video {
@@ -306,6 +317,7 @@ header.act .logo > svg {
     object-fit: cover;
 }
 
+<<<<<<< Updated upstream
 .durability {
     width: 100%;
     padding-top: 200px;
@@ -625,6 +637,20 @@ footer {
     line-height: 1.8;
     font-weight: 100;
 }
+=======
+.durability-area {
+    width: 100%;
+    max-width: 1532px;
+    max-height: 850px;
+}
+
+.durability-area video {
+
+
+    object-fit: cover;
+}
+
+>>>>>>> Stashed changes
 
 
 
