@@ -552,12 +552,13 @@ ul.etc-detail > li:nth-child(2) {
 
 footer {
     margin-top: 300px;
-    background-color: #808080;
+    background-color: #222222;
+    padding: 0 32px;
 }
 
 .footer-wrap {
-    padding-top: 110px;
-    max-width: 1274px;
+    padding-top: 80px;
+    max-width: 1320px;
     width: 100%;
     margin: 0 auto;
 }
@@ -565,8 +566,66 @@ footer {
 .footer-menu {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;    
 }
+
+.footer-menu-list {
+    width: 224px;
+}
+
+.footer-menu-list > div {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-submenu {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.menu-on {
+    height: 100%;
+}
+
+.footer-submenu-list {
+    font-size: 14px;
+    padding: 10px 10px;
+}
+
+.copyright {
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.copyright a {
+    padding: 14px 36px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.company-info {
+    padding-top: 20px;
+    color: white;
+    font-size: 12px;
+    line-height: 1.8;
+    font-weight: 100;
+}
+
 
 
 
