@@ -7,3 +7,9 @@ window.addEventListener('scroll', (e) => {
         headerBg.classList.remove('act');
     }
 })
+
+
+
+
+
+
