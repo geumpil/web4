@@ -279,14 +279,11 @@ header.act .logo > svg {
     object-fit: cover;
 }
 
-<<<<<<< Updated upstream
-=======
 .always-connecting {
     padding-top: 200px;
     width: 50%;
 }
 
->>>>>>> Stashed changes
 .sub-explain {
     padding-top: 40px;
     color: white;
@@ -301,15 +298,12 @@ header.act .logo > svg {
 .sub-explain p {
     font-size: 20px;
     font-weight: 100;
-<<<<<<< Updated upstream
     line-height: 1.6;
 }
 
 .always-connecting {
     padding-top: 200px;
     width: 50%;
-=======
->>>>>>> Stashed changes
 }
 
 .always-connecting-view video {
@@ -317,14 +311,13 @@ header.act .logo > svg {
     object-fit: cover;
 }
 
-<<<<<<< Updated upstream
 .durability {
     width: 100%;
     padding-top: 200px;
 }
 
 .durability-view {
-    height: 960px;
+    height: 850px;
     overflow: hidden;
     margin-bottom: 100px;
 }
@@ -560,16 +553,17 @@ ul.etc-detail > li:nth-child(2) {
     line-height: 1.7;
 }
 
-
+/* footer */
 
 footer {
     margin-top: 300px;
-    background-color: #808080;
+    background-color: #222222;
+    padding: 0 32px;
 }
 
 .footer-wrap {
-    padding-top: 110px;
-    max-width: 1274px;
+    padding-top: 80px;
+    max-width: 1320px;
     width: 100%;
     margin: 0 auto;
 }
@@ -577,22 +571,91 @@ footer {
 .footer-menu {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-}
-=======
-.durability-area {
-    width: 100%;
-    max-width: 1532px;
-    max-height: 850px;
+    flex-wrap: wrap;    
 }
 
-.durability-area video {
-
-
-    object-fit: cover;
+.footer-menu-list {
+    width: 224px;
 }
 
->>>>>>> Stashed changes
+.footer-submenu-list {
+    font-size: 14px;
+    padding: 10px 10px;
+}
 
+.footer-menu-list > input[type=checkbox] {
+    display: none;
+}
 
+.footer-menu-list > input[type=checkbox]+label span {
+    background-image: url('../icon/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
 
+.footer-menu-list > input[type=checkbox]:checked+label span {
+    background-image: url('../icon/arrow-up.svg');
+}
+
+.footer-menu-list .footer-submenu {
+    margin-bottom: 20px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    
+}
+
+.footer-menu-list > input[type=checkbox]:checked~.cm-h {
+    height: 156px;
+}
+
+.footer-menu-list > input[type=checkbox]:checked~.cp-h {
+    height: 204px;
+}
+
+.footer-menu-list > input[type=checkbox]:checked~.ci-h {
+    height: 306px;
+}
+
+.footer-menu-list > input[type=checkbox]:checked~.sl-h {
+    height: 170px;
+}
+
+.footer-menu-list > input[type=checkbox]:checked~.da-h {
+    height: 102px;
+}
+
+.copyright {
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.copyright a {
+    padding: 14px 36px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.company-info {
+    padding-top: 20px;
+    color: white;
+    font-size: 12px;
+    line-height: 1.8;
+    font-weight: 100;
+}
