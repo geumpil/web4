@@ -1,3 +1,5 @@
+headerExpandMenu();
+
 const headerBg = document.querySelector('header')
 
 window.addEventListener('scroll', (e) => {
