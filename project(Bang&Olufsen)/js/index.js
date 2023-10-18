@@ -1,3 +1,7 @@
+headerExpandMenu();
+
+// header animation
+
 const headerBg = document.querySelector('header')
 
 window.addEventListener('scroll', (e) => {
@@ -7,6 +11,8 @@ window.addEventListener('scroll', (e) => {
         headerBg.classList.remove('act');
     }
 })
+
+
 
 
 
