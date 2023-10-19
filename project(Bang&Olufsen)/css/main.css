@@ -27,6 +27,12 @@ header.act {
     align-items: center;
 }
 
+.hamberger-nav {
+    cursor: pointer;
+    width: 32px;
+    display: none;
+}
+
 .logo > svg {
     transition: 0.4s;
 }
@@ -190,12 +196,24 @@ header.act .logo > svg {
     display: block;
 }
 
-
-
 /* main view */
 
 .video-area {
     position: relative;
+
+}
+
+.video-title-wrap {
+    width: calc(100% - 64px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1532px;
+    display: flex;
+    align-items: flex-end;
+    
 }
 
 .video-area > video {
@@ -205,20 +223,20 @@ header.act .logo > svg {
     object-position: center top;
 }
 
-.video-title-area {
-    padding: 0 194px;
-    position: absolute;
-    bottom: 100px;
-    left: 0;
+.video-title-text {
+    padding-right: 10%;
+    padding-bottom: 100px;
+    /* left: 0; */
     color: white;
+
 }
 
-.video-title-area > h1 {
+.video-title-text > h1 {
     font-size: 20px;
     font-weight: 100;
 }
 
-.video-title-area .video-main-title {
+.video-title-text .video-main-title {
     padding-top: 10px;
     font-size: 60px;
     line-height: 1.5;
@@ -754,5 +772,19 @@ footer {
     font-size: 12px;
     line-height: 1.8;
     font-weight: 100;
+}
+
+@media screen and (max-width : 1024px) {
+    .gnb {
+        display: none;
+    }
+
+    .hamberger-nav {
+        display: block;
+    }
+
+    .video-title-text .video-main-title {
+        font-size: 52px;
+    }
 }
 

@@ -2,6 +2,7 @@ const headerExpand = document.querySelector('header > div');
 const listHoverActive = document.getElementsByClassName('main-list-cate');
 const imageText = document.getElementsByClassName('sub-list-cate');
 const imageView = document.getElementsByClassName('sub-image-list');
+const subImageView = document.getElementsByClassName('sub-image-view')
 
 function headerExpandMenu() {
     for(let i = 0; i < listHoverActive.length; i++) {
@@ -18,23 +19,6 @@ function headerExpandMenu() {
         })
     }
 
-    // for(let i = 0; i < imageText.length; i++) {
-    //     imageText[i].addEventListener('mouseover', () => {
-    //         for(let j = 0; j < imageView.length; j++) {
-    //             if(i == j) {
-    //                 imageView[j].style.opacity = '1';
-    //             }
-    //         }
-    //     })
-    //     imageView[i].addEventListener('mouseleave', () => {
-    //         for(let j = 0; j < imageView.length; j++) {
-    //             if(i == j) {
-    //                 imageView[j].style.opacity = '0';
-    //             }
-    //         }
-    //     })
-    // }
-
     for(let i = 0; i < imageText.length; i++) {
         imageText[i].addEventListener('mouseover', () => {
             for(let j = 0 ; j < imageView.length; j ++) {
@@ -45,15 +29,14 @@ function headerExpandMenu() {
       
     }
 
+    function init() {
+        for(let i = 0 ; i <subImageView.length;i++){
+            subImageView[i].firstElementChild.style.opacity='1'
+            // subImageView[i].firstElementChildChild.style.opacity = '1';
+        }
+    }
 
-    // imageView[i].addEventListener('mouseleave', () => {
-    //     for(let j = 0; j < imageView.length; j++) {
-    //         if(i == j) {
-    //             imageView[j].style.opacity = '0';
-    //         }
-    //     }
-    // })
-
+    init();
 
     function removeActive() {
         for(let i = 0; i <listHoverActive.length; i++) {
