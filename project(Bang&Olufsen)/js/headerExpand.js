@@ -15,7 +15,9 @@ function headerExpandMenu() {
         })
         listHoverActive[i].addEventListener('mouseleave', () => {
             removeActive();
+            // console.log('마우스리브')
             headerExpand.classList.remove('header-expand');
+            init();
         })
     }
 
@@ -31,6 +33,10 @@ function headerExpandMenu() {
 
     function init() {
         for(let i = 0 ; i <subImageView.length;i++){
+            for(let j = 0 ; j < subImageView[i].childElementCount; j ++) {
+                subImageView[i].children[j].style.opacity='0';
+                // console.log('실행됨!');
+            }
             subImageView[i].firstElementChild.style.opacity='1'
             // subImageView[i].firstElementChildChild.style.opacity = '1';
         }
