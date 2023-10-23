@@ -4,6 +4,7 @@ const imageText = document.getElementsByClassName('sub-list-cate');
 const imageView = document.getElementsByClassName('sub-image-list');
 const subImageView = document.getElementsByClassName('sub-image-view')
 
+
 function headerExpandMenu() {
     for(let i = 0; i < listHoverActive.length; i++) {
         listHoverActive[i].addEventListener('mouseover', () => {
@@ -20,6 +21,24 @@ function headerExpandMenu() {
             init();
         })
     }
+}
+    // for(let i = 0; i < imageText.length; i++) {
+    //     imageText[i].addEventListener('mouseover', () => {
+    //         for(let j = 0; j < imageView.length; j++) {
+    //             if(i == j) {
+    //                 imageView[j].style.opacity = '1';
+    //             }
+    //         }
+    //     })
+    //     imageView[i].addEventListener('mouseleave', () => {
+    //         for(let j = 0; j < imageView.length; j++) {
+    //             if(i == j) {
+    //                 imageView[j].style.opacity = '0';
+    //             }
+    //         }
+    //     })
+    // }
+
 
     for(let i = 0; i < imageText.length; i++) {
         imageText[i].addEventListener('mouseover', () => {
@@ -43,12 +62,8 @@ function headerExpandMenu() {
     }
 
     init();
-
     function removeActive() {
         for(let i = 0; i <listHoverActive.length; i++) {
             listHoverActive[i].classList.remove('hover-active');
         }
     }
-
-    
-}
