@@ -404,9 +404,15 @@ header.act .logo > svg {
     width: 50%;
 }
 
+.always-connecting-view video {
+    width: 100%;
+    object-fit: cover;
+}
+
 .sub-explain {
     padding-top: 40px;
     color: white;
+    word-break: keep-all;
 }
 
 .sub-explain h4 {
@@ -419,16 +425,6 @@ header.act .logo > svg {
     font-size: 20px;
     font-weight: 100;
     line-height: 1.6;
-}
-
-.always-connecting {
-    padding-top: 200px;
-    width: 50%;
-}
-
-.always-connecting-view video {
-    width: 100%;
-    object-fit: cover;
 }
 
 .durability {
@@ -484,7 +480,7 @@ ul.etc-detail > li:nth-child(2) {
     align-items: start;
 }
 
-.etc-detail-list figure figcaption {
+.etc-detail-list > div > p {
     padding-top: 40px;
     font-size: 30px;
     font-weight: 500;
@@ -510,26 +506,33 @@ ul.etc-detail > li:nth-child(2) {
 }
 
 .home-textarea p {
+    margin: 0 auto;
     padding-top: 50px;
     font-size: 20px;
     font-weight: 100;
 }
 
 .home-theater-detail {
-    padding-top: 300px;
+    padding: 300px 32px 0;
+}
+
+.home-theater-wrap {
+    max-width: 1532px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    gap: 120px;
+    gap: 60px;
 }
 
 .detail-image-area {
-    max-width: 610px;
+    max-width: 560px;
     width: 100%;
     flex-shrink: 0;
 }
 
 .detail-text-area {
     color: white;
+    word-break: keep-all;
 }
 
 .detail-text-area span {
@@ -811,7 +814,7 @@ footer {
     }
 
     .bao-title > p {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 100;
         line-height: 1.6;
     }
@@ -844,12 +847,167 @@ footer {
     }
     
     .waterproof-explain > p {
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.7;
     }
 
     .high-battery {
+        padding-top: 120px;
         width: 100%;
+    }
+
+    .always-connecting {
+        padding-top: 120px;
+        width: 100%;
+    }
+    
+    .sub-explain h4 {
+        font-size: 28px;
+    }
+
+    .sub-explain p {
+        font-size: 20px;
+        word-break: keep-all;
+    }
+
+    .durability {
+        width: 100%;
+        padding-top: 120px;
+    }
+
+    .durability-view {
+        height: auto;
+    }
+    
+    .durability-view video {
+        object-position: center;
+    }
+
+    .durability-explain > h3 {
+        font-size: 32px;
+    }
+    
+    .durability-explain > p {
+        font-size: 20px;
+    }
+
+    .etc-detail {
+        padding-top: 120px;
+        gap: 120px;
+    }
+
+    .etc-detail-list  {
+        align-items: flex-start;
+
+    }
+
+    .etc-detail-list > div {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+
+    }
+
+    .etc-detail-list > div > div {
+        width: 50%;
+        max-width: 350px;
+        max-height: 350px;
+        overflow: hidden;
+        flex-shrink: 0;
+
+    }
+
+    .etc-detail-list > div > div > img {
+        height: fit-content;
+        object-fit: cover;
+
+    }
+
+    .etc-detail-list:nth-child(2) > div > div > img {
+        object-position: center -80px;
+    }
+
+    .etc-detail-list > div > p {
+        width: 50%;
+        padding-top: 0;
+        padding-left: 30px;
+        font-size: 24px;
+    }
+
+    #home-theater-system {
+        padding-top: 270px;
+    }
+
+    .home-textarea h2 {
+        font-size: 46px;   
+    }
+    
+    .home-textarea p {
+        font-size: 20px;
+        line-height: 1.7;
+        word-break: keep-all;
+        max-width: 460px;
+    }
+
+    .home-theater-detail {
+        padding: 160px 32px 0;
+    }
+
+    .home-theater-wrap {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .detail-image-area {
+        max-width: 100%;
+    }
+
+    .detail-text-area span {
+        font-size: 20px;
+    }
+    
+    .detail-text-area h2 {
+        font-size: 42px;
+    }
+    
+    .detail-text-area p {
+        font-size: 20px;
+        padding-top: 30px;
+    }
+
+    .slider-area {
+        padding-top: 160px;
+    }
+
+    #anc-system {
+        padding: 270px 32px 0;
+    }
+
+    .anc-system-area > div {
+        font-size: 42px;
+    }
+
+    .anc-setting {
+        flex-direction: column;
+        justify-content: center;
+        gap: 80px;
+        padding-top: 270px;
+        color: white;
+        position: relative;
+    }
+
+    .anc-setting-content {
+        max-width: 100%;
+        position: static;
+    }
+
+    .anc-detail-area {
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    footer {
+        margin-top: 160px;
     }
 }
 
