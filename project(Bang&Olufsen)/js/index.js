@@ -1,4 +1,5 @@
 headerExpandMenu();
+init();
 
 // header animation
 
