@@ -8,7 +8,7 @@ header {
     transition: 0.4s;
     padding: 0 32px;
     box-sizing: border-box;
-    border-bottom: 1px solid #666;
+
     background-color: black;
 }
 
@@ -25,6 +25,12 @@ header.act {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.hamberger-nav {
+    cursor: pointer;
+    width: 32px;
+    display: none;
 }
 
 .logo > svg {
@@ -169,8 +175,10 @@ header.act .logo > svg {
     height: 310px;
     background-color: black;
     position: absolute;
-    top: calc(100% + 0.5px);
+    top: 100%;
     left: 0;
+    border-top: 1px solid #666;
+    box-sizing: border-box;
 }
 
 
@@ -196,6 +204,20 @@ header.act .logo > svg {
 
 .video-area {
     position: relative;
+
+}
+
+.video-title-wrap {
+    width: calc(100% - 64px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1532px;
+    display: flex;
+    align-items: flex-end;
+    
 }
 
 .video-area > video {
@@ -205,25 +227,26 @@ header.act .logo > svg {
     object-position: center top;
 }
 
-.video-title-area {
-    padding: 0 194px;
-    position: absolute;
-    bottom: 100px;
-    left: 0;
+.video-title-text {
+    padding-right: 10%;
+    padding-bottom: 100px;
+    /* left: 0; */
     color: white;
+
 }
 
-.video-title-area > h1 {
+.video-title-text > h1 {
     font-size: 20px;
     font-weight: 100;
 }
 
-.video-title-area .video-main-title {
+.video-title-text .video-main-title {
     padding-top: 10px;
     font-size: 60px;
     line-height: 1.5;
     letter-spacing: -1px;
     font-weight: 500;
+    word-break: keep-all;
 }
 
 .line-break {
@@ -307,7 +330,7 @@ header.act .logo > svg {
 
 .beosound-video-area > video {
     width: 100%;
-    height: 100vh;
+    height: auto;
     object-fit: cover;
     object-position: center top;
 }
@@ -363,6 +386,7 @@ header.act .logo > svg {
     font-size: 20px;
     font-weight: 100;
     line-height: 1.7;
+    word-break: keep-all;
 }
 
 .high-battery {
@@ -754,4 +778,118 @@ footer {
     font-size: 12px;
     line-height: 1.8;
     font-weight: 100;
+}
+
+@media screen and (max-width : 1024px) {
+    .gnb {
+        display: none;
+    }
+
+    .hamberger-nav {
+        display: block;
+    }
+
+    .sub-list .sub-list-cate:nth-child(1) {
+        display: none;
+    }
+
+    .sub-list .sub-list-cate:nth-child(2) {
+        display: none;
+    }
+
+    .video-title-text {
+        padding-right: 5%;
+    
+    }
+
+    #bao-items {
+        padding-top: 270px;
+    }
+
+    .bao-title > h2 {
+        font-size: 46px;
+    }
+
+    .bao-title > p {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 1.6;
+    }
+
+    .items-type {
+        padding-top: 270px;
+        flex-wrap: wrap;
+        
+    }
+    
+    .items-list {
+        width: calc(50% - 10px);
+        text-align: center;
+    }
+
+    .items-list p {
+        padding-bottom: 30px;
+    }
+    
+    #beosound-explore {
+        padding-top: 240px;
+    }
+
+    .beosound-text-area > h2 {
+        font-size: 48px;
+    }
+
+    .waterproof-explain > h3 {
+        font-size: 32px;
+    }
+    
+    .waterproof-explain > p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .high-battery {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 744px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .video-title-text {
+        padding-right: 0;
+    
+    }
+
+    .video-title-text .video-main-title {
+        font-size: 42px;
+    }
+
+    .beosound-text-area > h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .beosound-text-area > a {
+        font-size: 14px;
+        width: 140px;
+        line-height: 36px;
+    }
+
+}
+
+@media screen and (max-width : 480px) {
+    .video-title-text {
+        padding-right: 5%;
+    }
+
+    .video-title-text .video-main-title {
+        font-size: 28px;
+    }
+
+    .video-title-text .video-subtitle {
+        font-size: 16px;
+    }
 }
