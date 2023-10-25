@@ -783,7 +783,7 @@ footer {
     font-weight: 100;
 }
 
-@media screen and (max-width : 1024px) {
+@media screen and (max-width : 1264px) {
     .gnb {
         display: none;
     }
@@ -802,7 +802,12 @@ footer {
 
     .video-title-text {
         padding-right: 5%;
-    
+    }
+
+    .video-title-text .video-main-title {
+        padding-top: 10px;
+        font-size: 52px;
+        line-height: 1.5;
     }
 
     #bao-items {
@@ -822,7 +827,6 @@ footer {
     .items-type {
         padding-top: 270px;
         flex-wrap: wrap;
-        
     }
     
     .items-list {
@@ -831,11 +835,11 @@ footer {
     }
 
     .items-list p {
-        padding-bottom: 30px;
+        padding-bottom: 150px;
     }
     
     #beosound-explore {
-        padding-top: 240px;
+        padding-top: 120px;
     }
 
     .beosound-text-area > h2 {
@@ -1022,7 +1026,7 @@ footer {
     }
 
     .video-title-text .video-main-title {
-        font-size: 42px;
+        font-size: 28px;
     }
 
     .beosound-text-area > h2 {
@@ -1031,23 +1035,60 @@ footer {
     }
 
     .beosound-text-area > a {
-        font-size: 14px;
+        font-size: 16px;
         width: 140px;
         line-height: 36px;
     }
 
-}
-
-@media screen and (max-width : 480px) {
-    .video-title-text {
-        padding-right: 5%;
+    #bao-items {
+        padding-top: 200px;
     }
 
-    .video-title-text .video-main-title {
+    .bao-title > h2 {
         font-size: 28px;
     }
 
-    .video-title-text .video-subtitle {
+    .bao-title > p {
         font-size: 16px;
     }
+
+    .items-type {
+        padding-top: 200px;
+        gap: 100px;
+    }
+    
+    .items-list {
+        width: 100%;
+        text-align: center;
+    }
+
+    .items-list p {
+        padding-bottom: 0;
+    }
+
+    #beosound-explore {
+        padding-top: 200px;
+    }
+
+    .beosound-text-area > h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .beosound-text-area > a {
+        width: 120px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .waterproof-explain > h3 {
+        font-size: 24px;
+    }
+
+    .waterproof-explain > p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
 }
+
+
