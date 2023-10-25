@@ -491,6 +491,9 @@ ul.etc-detail > li:nth-child(2) {
 
 #home-theater-system {
     padding-top: 300px;
+}
+
+.view-area {
     overflow: hidden;
 }
 
@@ -842,6 +845,10 @@ footer {
         padding-top: 120px;
     }
 
+    .beosound-video-area {
+        margin-bottom: 30px;
+    }
+
     .beosound-text-area > h2 {
         font-size: 48px;
     }
@@ -914,8 +921,6 @@ footer {
 
     .etc-detail-list > div > div {
         width: 50%;
-        max-width: 350px;
-        max-height: 350px;
         overflow: hidden;
         flex-shrink: 0;
 
@@ -928,7 +933,7 @@ footer {
     }
 
     .etc-detail-list:nth-child(2) > div > div > img {
-        object-position: center -80px;
+        object-position: center;
     }
 
     .etc-detail-list > div > p {
@@ -1005,6 +1010,11 @@ footer {
         position: static;
     }
 
+    .anc-setting-title h3 {
+        font-size: 32px;
+    }
+
+
     .anc-detail-area {
         max-width: 100%;
         padding-top: 0;
@@ -1020,6 +1030,10 @@ footer {
         padding: 0 20px;
     }
 
+    .video-title-wrap {
+        width: calc(100% - 40px);        
+    }
+
     .video-title-text {
         padding-right: 0;
     
@@ -1029,19 +1043,8 @@ footer {
         font-size: 28px;
     }
 
-    .beosound-text-area > h2 {
-        font-size: 32px;
-        margin-bottom: 30px;
-    }
-
-    .beosound-text-area > a {
-        font-size: 16px;
-        width: 140px;
-        line-height: 36px;
-    }
-
     #bao-items {
-        padding-top: 200px;
+        padding: 200px 20px 0;
     }
 
     .bao-title > h2 {
@@ -1067,7 +1070,7 @@ footer {
     }
 
     #beosound-explore {
-        padding-top: 200px;
+        padding: 200px 20px 0;
     }
 
     .beosound-text-area > h2 {
@@ -1082,12 +1085,162 @@ footer {
     }
 
     .waterproof-explain > h3 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .waterproof-explain > p {
         font-size: 16px;
         line-height: 1.7;
+    }
+
+    .sub-explain h4 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .sub-explain p {
+        font-size: 16px;
+        word-break: keep-all;
+    }
+
+    .durability-view {
+        margin-bottom: 40px;
+    }
+    
+    .durability-explain > h3 {
+        font-size: 28px;
+    }
+    
+    .durability-explain > p {
+        font-size: 16px;
+    }
+
+    .etc-detail {
+        padding-top: 160px;
+        gap: 160px;
+    }
+
+    .etc-detail-list  {
+        align-items: flex-start;
+
+    }
+
+    .etc-detail-list > div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+
+    }
+
+    .etc-detail-list > div > div {
+        width: calc(100vw - 40px);
+        overflow: hidden;
+        flex-shrink: 0;
+
+    }
+
+    .etc-detail-list > div > div > img {
+        height: fit-content;
+        object-fit: cover;
+
+    }
+
+    .etc-detail-list:nth-child(2) > div > div > img {
+        object-position: center;
+    }
+
+    .etc-detail-list > div > p {
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 0;
+        font-size: 24px;
+    }
+
+    #home-theater-system {
+        padding-top: 200px;
+    }
+
+    .home-textarea {
+        padding-top: 100px;
+    }
+    
+    .home-textarea h2 {
+        font-size: 28px;   
+    }
+    
+    .home-textarea p {
+        padding-top: 30px;
+        font-size: 16px;
+        max-width: 360px;
+    }
+
+    .home-theater-detail {
+        padding: 160px 20px 0;
+    }
+
+    .home-theater-wrap {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .detail-text-area span {
+        font-size: 16px;
+    }
+    
+    .detail-text-area h2 {
+        font-size: 28px;
+    }
+    
+    .detail-text-area p {
+        font-size: 16px;
+    }
+
+    #anc-system {
+        padding: 200px 20px 0;
+    }
+
+    .anc-system-area > p {
+        font-size: 16px;
+    }
+
+    .anc-system-area > div {
+        font-size: 28px;
+    }
+
+    .anc-setting {
+        flex-direction: column;
+        justify-content: center;
+        gap: 80px;
+        padding-top: 160px;
+        color: white;
+        position: relative;
+    }
+
+    .anc-setting-content {
+        max-width: 100%;
+        position: static;
+    }
+
+    .anc-setting-title h3 {
+        font-size: 24px;
+    }
+
+    .anc-setting-title p {
+        font-size: 16px;
+    }
+    
+    .anc-detail-area {
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    .anc-explain-area > li > h4 {
+        font-size: 20px;
+    }
+
+    footer {
+        margin-top: 160px;
     }
 }
 
