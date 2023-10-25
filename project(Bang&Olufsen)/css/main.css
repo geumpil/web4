@@ -677,6 +677,7 @@ ul.etc-detail > li:nth-child(2) {
     font-size: 20px;
     font-weight: 100;
     line-height: 1.7;
+    word-break: keep-all;
 }
 
 /* footer */
@@ -1239,8 +1240,24 @@ footer {
         font-size: 20px;
     }
 
+    .anc-explain-area > li > p {
+        font-size: 16px;
+    }
+
     footer {
         margin-top: 160px;
+        padding: 0 20px;
+    }
+
+    .footer-menu {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;    
+    }
+    
+    .footer-menu-list {
+        width: 100%;
+        padding: 0 20px;
     }
 }
 
