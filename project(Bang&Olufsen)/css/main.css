@@ -1138,11 +1138,12 @@ footer {
         right: 0;
         cursor: pointer;
     }
-
+    
     .hamberger-logo {
         padding-top: 32px;
         margin-bottom: 32px;
     }
+
     .hamberger-menu {
         width: 60%;
         position: absolute;
@@ -1363,6 +1364,17 @@ footer {
         width: 100%;
     }
  
+   
+    .slide-wrapper {
+        width: calc((580px * 5) + (100px * 4));
+        transform: translateX(calc((-580px - 100px) * 1));
+        gap: 100px;
+    }
+    
+    .slide-image-view {
+        width: 580px;
+    }
+        
     .prev, .next {
         display: none;
     }
