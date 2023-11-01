@@ -201,8 +201,6 @@ header.act .logo > svg {
     display: block;
 }
 
-
-
 /* main view */
 
 .video-area {
@@ -746,11 +744,11 @@ ul.etc-detail > li:nth-child(2) {
 footer {
     margin-top: 300px;
     background-color: #222222;
-    padding: 0 32px;
+    padding: 0 32px 50px;
 }
 
 .footer-wrap {
-    padding-top: 80px;
+    padding-top: 50px;
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
@@ -846,6 +844,13 @@ footer {
     font-size: 12px;
     line-height: 1.8;
     font-weight: 100;
+}
+
+/* text - fade effect */
+
+.scroll-act {
+    opacity: 0;
+    transition: all 1.5s;
 }
 
 @media screen and (max-width : 1264px) {
@@ -1130,6 +1135,8 @@ footer {
         justify-content: center;
         align-items: center;
         position: relative;
+        padding-top: 18px;
+        margin-bottom: 32px;
 
     }
 
@@ -1139,11 +1146,6 @@ footer {
         cursor: pointer;
     }
     
-    .hamberger-logo {
-        padding-top: 32px;
-        margin-bottom: 32px;
-    }
-
     .hamberger-menu {
         width: 60%;
         position: absolute;
@@ -1428,13 +1430,14 @@ footer {
 
     footer {
         margin-top: 160px;
-        padding: 0 20px;
+        padding: 0 20px 50px;
     }
 
     .footer-menu {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;    
+        flex-wrap: wrap;
+        margin-bottom: 30px; 
     }
     
     .footer-menu-list {
@@ -1444,11 +1447,12 @@ footer {
 
     .copyright {
         flex-direction: column;
-        gap: 30px;
+        gap: 60px;
+        margin-bottom: 30px;
     }
 
     .copyright h2 {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 500;
     }
     
@@ -1461,7 +1465,6 @@ footer {
     
     .company-info {
         text-align: center;
-        padding-top: 30px;
         color: white;
         font-size: 12px;
         line-height: 1.8;

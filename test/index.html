@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        div {
+            width: 100%;
+            margin-bottom: 1000px;
+            margin-top: 1000px;
+            text-align: center;
+            font-size: 80px;
+            opacity: 0;
+            transition: all 1.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="act">안녕하세요</div>
+    <div class="act">반갑습니다</div>
+    <div class="act">정말 배가고파요</div>
+    <script>
+        const observer = new IntersectionObserver((e, observer) => {
+            e.forEach((action) => {
+                if(action.isIntersecting) {
+                    action.target.style.opacity = '1';
+                } else {
+                    action.target.style.opacity = '0';
+                }
+            })
+        })
+
+        document.querySelectorAll('.act').forEach((act) => observer.observe(act));
+    </script>
+</body>
+</html>
