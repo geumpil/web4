@@ -246,7 +246,7 @@ header.act .logo > svg {
     font-size: 60px;
     line-height: 1.5;
     letter-spacing: -1px;
-    font-weight: 500;
+    font-weight: 300;
     word-break: keep-all;
 }
 
@@ -449,7 +449,7 @@ header.act .logo > svg {
     max-width: 760px;
     width: 100%;
     border-top: 1px solid white;
-    color: white
+    color: black;
 }
 
 .durability-explain > h3 {
@@ -461,7 +461,7 @@ header.act .logo > svg {
 .durability-explain > p {
     padding-top: 40px;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.7;
 }
 
@@ -485,7 +485,7 @@ ul.etc-detail > li:nth-child(2) {
     padding-top: 40px;
     font-size: 30px;
     font-weight: 500;
-    color: white;
+    color: black;
 }
 
 /* section - home-theater-system */
@@ -496,11 +496,28 @@ ul.etc-detail > li:nth-child(2) {
 
 .view-area {
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.fold-container {
+    width: 0%;
+    overflow: hidden;
+}
+
+.unfolded {
+    transition: 2s;
+    width: 100%;
+}
+
+.fold-container > img {
+    height: 600px;
+    object-fit: cover;
 }
 
 .home-textarea {
     text-align: center;
-    color: white;
+    color: black;
     padding-top: 100px;
     margin-bottom: 300px;
 }
@@ -514,7 +531,7 @@ ul.etc-detail > li:nth-child(2) {
     margin: 0 auto;
     padding-top: 50px;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .home-theater-detail {
@@ -558,7 +575,7 @@ ul.etc-detail > li:nth-child(2) {
 .detail-text-area p {
     padding-top: 40px;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.7;
     word-break: keep-all;
 }
@@ -665,6 +682,7 @@ ul.etc-detail > li:nth-child(2) {
     font-size: 60px;
     font-weight: 300;
     padding: 24px 0;
+    gap: 8px;
 }
 
 .anc-setting {
@@ -1284,7 +1302,6 @@ footer {
         gap: 160px;
     }
 
-
     .etc-detail-list > div {
         display: flex;
         flex-direction: column;
@@ -1300,10 +1317,6 @@ footer {
 
     }
 
-
-
-
-
     .etc-detail-list > div > p {
         width: 100%;
         padding-top: 20px;
@@ -1315,8 +1328,14 @@ footer {
         padding-top: 200px;
     }
 
+    .fold-container > img {
+        height: 400px;
+
+    }
+
     .home-textarea {
         padding-top: 100px;
+        margin-bottom: 160px;
     }
     
     .home-textarea h2 {
@@ -1330,10 +1349,9 @@ footer {
     }
 
     .home-theater-detail {
-        padding: 160px 20px 0;
+        padding: 0 20px;
+        margin-bottom: 160px;
     }
-
-
 
     .detail-text-area span {
         font-size: 16px;
@@ -1391,7 +1409,19 @@ footer {
 
     .anc-system-area > div {
         font-size: 28px;
+        padding: 0;
+        flex-direction: column;
+        border: none;
+        gap: 0;
     }
+
+    .anc-system-area > div > p {
+        width: 100%;
+        padding: 24px 0;
+        border-bottom: 1px solid white;
+
+    }
+
 
     .anc-setting {
         flex-direction: column;
