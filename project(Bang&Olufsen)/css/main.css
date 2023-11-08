@@ -3,7 +3,7 @@
 header {
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 80px;
     z-index: 100;
     transition: 0.4s;
     padding: 0 32px;
@@ -13,7 +13,7 @@ header {
 
 header.act {
     background-color: black;
-    height: 80px;
+    height: 70px;
 
 }
 

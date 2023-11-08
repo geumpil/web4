@@ -10,15 +10,16 @@ window.addEventListener('scroll', () => {
         document.body.style.backgroundColor = 'white';
         document.body.style.transition = '0.4s';
         durabilityTextColor.style.color = 'black';
+        durabilityTextColor.style.borderTop = '1px solid black'; 
         textColor.style.color = 'black';
     } 
     else{
         document.body.style.backgroundColor = 'black';
         textColor.style.color = 'white';
         durabilityTextColor.style.color = 'white';
+        durabilityTextColor.style.borderTop = '1px solid white';
     }
 }) 
-
 
 
 /* scroll text effect */
