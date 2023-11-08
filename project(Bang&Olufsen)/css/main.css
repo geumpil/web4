@@ -449,7 +449,7 @@ header.act .logo > svg {
     max-width: 760px;
     width: 100%;
     border-top: 1px solid white;
-    color: black;
+    color: white;
 }
 
 .durability-explain > h3 {
@@ -621,6 +621,7 @@ ul.etc-detail > li:nth-child(2) {
     right: calc(100% + 74px);
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .prev_bl, .next_bl {
@@ -633,6 +634,7 @@ ul.etc-detail > li:nth-child(2) {
     left: calc(100% + 74px);
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .slide-bar-btn {
@@ -1070,6 +1072,7 @@ footer {
     }
 
     .slider-area {
+        max-width: 1264px;
         width: 580px;
     }
     
@@ -1383,16 +1386,20 @@ footer {
     .slide-image-view > img {
         width: 100%;
     }
+
+    .slider-area {
+        width: 100vw;
+    }
  
    
     .slide-wrapper {
-        width: calc((580px * 5) + (100px * 4));
-        transform: translateX(calc((-580px - 100px) * 1));
-        gap: 100px;
+        width: calc(100vw * 5);
+        transform: translateX(calc(100vw * 1));
+        gap: 0;
     }
     
     .slide-image-view {
-        width: 580px;
+        width: 100vw;
     }
         
     .prev, .next {

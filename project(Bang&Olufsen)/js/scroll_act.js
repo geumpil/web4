@@ -1,5 +1,6 @@
 /* scroll bg-color change*/
-const bgWhiteLocation = document.querySelector('.durability'); 
+const bgWhiteLocation = document.querySelector('.durability');
+const durabilityTextColor = document.querySelector('.durability-explain'); 
 const bgBlackLocation = document.querySelector('.view-area');
 const textColor = document.querySelector('.home-textarea')
 
@@ -8,11 +9,13 @@ window.addEventListener('scroll', () => {
     if(bgWhiteLocation.getBoundingClientRect().top < 0 && bgBlackLocation.getBoundingClientRect().top > 0) {
         document.body.style.backgroundColor = 'white';
         document.body.style.transition = '0.4s';
+        durabilityTextColor.style.color = 'black';
         textColor.style.color = 'black';
     } 
     else{
         document.body.style.backgroundColor = 'black';
         textColor.style.color = 'white';
+        durabilityTextColor.style.color = 'white';
     }
 }) 
 

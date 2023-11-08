@@ -6,22 +6,37 @@ const nextBtn = document.querySelector('.next');
 const realSlideCount = slideImgList.length;
 const viewCount = 3;
 
+let slideSize = '1000px';
+let gapSize = 200;
+
 let index = 5;
-apply(false);
-// makeClone();
 
-for(let i = 0 ; i < slideBtn.childElementCount ; i ++) {
+for(let i = 0 ; i < realSlideCount ; i ++) {
 
-    slideBtn.children[i].addEventListener('click',()=>{
-        index = i;
+
+    const bar = document.createElement('div');
+    bar.classList.add('bar');
+
+    bar.addEventListener('click', ()=>{
+        index = i+viewCount;
         console.log(i);
         apply(true);
+
+        // for(let j = 0 ; j < slideBtn.childElementCount; j++) {
+        //     slideBtn.children[j].classList.remove('bar-act')
+        // }
+        // bar.classList.add('bar-act')
     })
+
+    slideBtn.appendChild(bar);
+
 }
 
+apply(false);
+
 function apply(animation){
-    slideImg.style.transform=  `translateX(calc((-1000px - 200px) * ${index}))`
-    buttonUpdate(index);
+    slideImg.style.transform=  `translateX(calc((-${slideSize} - ${gapSize}px) * ${index}))`
+    buttonUpdate();
 
     if(animation){
         slideImg.style.transition = `1s`
@@ -30,12 +45,44 @@ function apply(animation){
     }
 }
 
-function buttonUpdate(realSlideCount) {
-    // for(let i = 0 ; i < slideBtn.childElementCount; i++) {
-    //     slideBtn.children[i].classList.remove('bar-act')
-    // }
-    // slideBtn.children[index].classList.add('bar-act')
+function buttonUpdate() {
+    for(let i = 0 ; i < slideBtn.childElementCount; i++) {
+        slideBtn.children[i].classList.remove('bar-act')
+    }
+    console.log(slideBtn.children[index-viewCount])
+
+    if(index<viewCount) {
+        slideBtn.lastElementChild.classList.add('bar-act')
+    }else if(index>realSlideCount+viewCount-1){
+        slideBtn.firstElementChild.classList.add('bar-act')
+
+    }else{
+        slideBtn.children[index-viewCount].classList.add('bar-act')
+
+    }
+
 }
+
+// 슬라이드 1000px, 갭 200px
+// 1264분기점
+// 슬라이드 580px 갭 100px
+
+// 744, 100vw 갭 0px
+
+window.addEventListener('resize',(e)=>{
+    if(window.innerWidth>1264) {
+        slideSize='1000px';
+        gapSize=200;
+    }else if(window.innerWidth>744) {
+        slideSize='580px';
+        gapSize=100;
+    }else {
+        slideSize='100vw';
+        gapSize=0;
+    }
+    apply(false);
+})
+
 
 makeClone();
 
@@ -94,9 +141,8 @@ function makeClone() {
 
     nextBtn.addEventListener('click',()=>{
        if(moveAble){
-        moveAble=false; 
-        console.log(realSlideCount.length)
-
+        moveAble = false; 
+        // console.log(realSlideCount.length)
         index++;
         apply(true)
         setTimeout(() => {
